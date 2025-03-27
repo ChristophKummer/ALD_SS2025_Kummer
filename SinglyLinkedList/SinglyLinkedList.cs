@@ -29,7 +29,7 @@ namespace SinglyLinkedList
     Node<T> head;
     Node<T> tail;
     int count;
-
+        //hier muss noch etwas geändert werden es fehlt int 
         public void Add(T value)
         {   
             count++;
