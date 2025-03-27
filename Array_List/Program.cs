@@ -35,7 +35,7 @@ namespace Array_List
             timeAL.Reset();
 
             timeSLL.Start();
-            strVarSLL.RemoveAt(2);
+            //strVarSLL.RemoveAt(2);
             timeSLL.Stop();
             Console.WriteLine("Time for RemoveAt SLL: " + timeSLL);
 

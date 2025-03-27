@@ -1,20 +1,19 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Array_List;
 using SinglyLinkedList;
-using ArrayList;
 
 namespace Hashtable
 {
-    internal class Hashtable<K, V>
+    public class Hashtable<K,V>
     {
-        private ArrayList.ArrayList<SinglyLinkedList.SinglyLinkedList<Tuple<K,V>>> m_container;
+        private Array_List.ArrayList<SinglyLinkedList.SinglyLinkedList<Tuple<K, V>>> m_container;
         public void put(K key, V value)
-        {
-            key.GetHashCode();
+        { 
+
         }
 
         public V get(K key)
@@ -25,7 +24,7 @@ namespace Hashtable
         public bool get(K key, out V value)
         {
             value = default(V);
-            return true;
-        }
+            return false;
+        } 
     }
 }
