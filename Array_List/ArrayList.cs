@@ -60,10 +60,24 @@ namespace Array_List
             return array.Length;
         }
 
-        
-
-
-
-
+        public T this[int index]
+        {
+            get
+            {
+                if (index < 0 || index >= array.Length)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                return array[index];
+            }
+            set
+            {
+                if (index < 0 || index >= array.Length)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                array[index] = value;
+            }
+        }
     }
 }

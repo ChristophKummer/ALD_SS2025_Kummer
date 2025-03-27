@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Array_List/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SinglyLinkedList": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Array_List.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Array_List.dll": {}
+        }
+      },
       "SinglyLinkedList/1.0.0": {
         "type": "project",
         "compile": {
@@ -14,6 +27,11 @@
     }
   },
   "libraries": {
+    "Array_List/1.0.0": {
+      "type": "project",
+      "path": "../Array_List/Array_List.csproj",
+      "msbuildProject": "../Array_List/Array_List.csproj"
+    },
     "SinglyLinkedList/1.0.0": {
       "type": "project",
       "path": "../SinglyLinkedList/SinglyLinkedList.csproj",
@@ -22,6 +40,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Array_List >= 1.0.0",
       "SinglyLinkedList >= 1.0.0"
     ]
   },
@@ -32,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\Array_List\\Array_List.csproj",
-      "projectName": "Array_List",
-      "projectPath": "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\Array_List\\Array_List.csproj",
+      "projectUniqueName": "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\Hashtable\\Hashtable.csproj",
+      "projectName": "Hashtable",
+      "projectPath": "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\Hashtable\\Hashtable.csproj",
       "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\Array_List\\obj\\",
+      "outputPath": "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\Hashtable\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,6 +77,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\Array_List\\Array_List.csproj": {
+              "projectPath": "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\Array_List\\Array_List.csproj"
+            },
             "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\SinglyLinkedList\\SinglyLinkedList.csproj": {
               "projectPath": "C:\\Users\\chris\\source\\repos\\ALD_SS2025\\SinglyLinkedList\\SinglyLinkedList.csproj"
             }
