@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,16 +7,8 @@ using System.Threading.Tasks;
 
 namespace SinglyLinkedList
 {
-  public class SinglyLinkedList<T>
+  public class SinglyLinkedList<T> : IEnumerable<T>, IEnumerator<T>
   {
-    //
-    public SinglyLinkedList()
-    {
-      head = null;
-      tail = null;
-      count = 0;
-    }
-    
     private class Node<T>
     {
       public Node(T value)
@@ -26,9 +19,23 @@ namespace SinglyLinkedList
       public Node<T> next { get; set; }
     }
 
+    Node<T> current;
+    public SinglyLinkedList()
+    {
+      head = null;
+      tail = null;
+      count = 0;
+    }
+    
+
     Node<T> head;
     Node<T> tail;
     int count;
+
+        public T Current => current.Value;
+
+        object IEnumerator.Current => Current;
+
         //hier muss noch etwas geändert werden es fehlt int 
         public void Add(T value)
         {   
@@ -150,5 +157,37 @@ namespace SinglyLinkedList
             count = 0;
         }
 
-  }
+        public IEnumerator<T> GetEnumerator()
+        {
+            return this;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public void Dispose()
+        {
+            Reset();
+        }
+
+        public bool MoveNext()
+        {
+            try
+            {
+                this.current = this.current.next;
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public void Reset()
+        {
+            this.current = this.head;
+        }
+    }
 }
